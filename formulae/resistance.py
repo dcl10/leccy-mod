@@ -31,3 +31,16 @@ def resistivity(
         float: _description_
     """
     return (resistance * area) / length
+
+
+def resistance(voltage: Union[int, float], current: Union[int, float]) -> float:
+    """Calculate resistance, in Ohms (\u03A9), based on Ohm's Law.
+
+    Args:
+        voltage (Union[int, float]): The voltage, in volts (V).
+        current (Union[int, float]): The current, in Amperes (A).
+
+    Returns:
+        float: The resistance, in Ohms (\u03A9).
+    """
+    return voltage / current
