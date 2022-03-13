@@ -15,3 +15,19 @@ def wire_resistance(
         float: The resistance of the wire, in Ohms (\u03A9).
     """
     return resistivity * (length / area)
+
+
+def resistivity(
+    resistance: Union[int, float], area: Union[int, float], length: Union[int, float]
+) -> float:
+    """Calculate the resistivity of the material of a wire, in Ohm metres (\u03A9m).
+
+    Args:
+        resistance (Union[int, float]): The resistance of the wire, in Ohms (\u03A9).
+        area (Union[int, float]): The cross-sectional area of the wire, in sq. metres (m^2).
+        length (Union[int, float]): The length of the wire, in metres (m).
+
+    Returns:
+        float: _description_
+    """
+    return (resistance * area) / length
